@@ -1,27 +1,66 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <style name="Theme.Quiz" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorOnPrimary">@color/deep_orange_100_light</item>
         <item name="colorOnSecondary">@color/black</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
     </style>
 
     <style name="Theme.Quiz.First" parent="Theme.Quiz">
-        <item name="colorPrimary">@color/deep_orange_100</item>
-        <item name="colorPrimaryDark">@color/deep_orange_100_dark</item>
-        <item name="colorPrimaryVariant">@color/deep_orange_100_dark</item>
-        <item name="colorSecondary">@color/deep_orange_100</item>
-        <item name="colorSecondaryVariant">@color/deep_orange_100_light</item>
+        <item name="colorPrimary">#009688</item>
+        <item name="colorPrimaryDark">#E91E63</item>
+        <item name="colorPrimaryVariant">#9C27B0</item>
+        <item name="colorSecondary">#CDDC39</item>
+        <item name="colorSecondaryVariant">#FFC107</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">@color/deep_orange_100_dark</item>
+        <item name="android:statusBarColor">@color/black</item>
     </style>
 
     <style name="Theme.Quiz.Second" parent="Theme.Quiz">
-        <item name="colorPrimary">@color/yellow_100</item>
+        <item name="colorPrimary">@color/deep_orange_100</item>
         <item name="colorPrimaryDark">@color/yellow_100_dark</item>
         <item name="colorPrimaryVariant">@color/yellow_100_dark</item>
-        <item name="colorSecondary">@color/yellow_100</item>
-        <item name="colorSecondaryVariant">@color/yellow_100_light</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor">@color/yellow_100_dark</item>
+        <item name="colorSecondary">#204C72</item>
+        <item name="colorSecondaryVariant">@color/yellow_100</item>
     </style>
+
+    <style name="Theme.Quiz.Third" parent="Theme.Quiz">
+        <item name="colorPrimary">@color/cyan_100_dark</item>
+        <item name="colorPrimaryDark">@color/yellow_100_dark</item>
+        <item name="colorPrimaryVariant">@color/yellow_100_dark</item>
+        <item name="colorSecondary">#13962F</item>
+        <item name="colorSecondaryVariant">@color/yellow_100</item>
+    </style>
+
+    <style name="Theme.Quiz.Fourth" parent="Theme.Quiz">
+        <item name="colorPrimary">@color/light_green_100_dark</item>
+        <item name="colorPrimaryDark">@color/yellow_100_dark</item>
+        <item name="colorPrimaryVariant">@color/yellow_100_dark</item>
+        <item name="colorSecondary">#E1D74AAD</item>
+        <item name="colorSecondaryVariant">@color/yellow_100</item>
+    </style>
+
+    <style name="Theme.Quiz.Fifth" parent="Theme.Quiz">
+        <item name="colorPrimary">@color/yellow_100_dark</item>
+        <item name="colorPrimaryDark">@color/yellow_100_dark</item>
+        <item name="colorPrimaryVariant">@color/yellow_100_dark</item>
+        <item name="colorSecondary">#D0214D</item>
+        <item name="colorSecondaryVariant">@color/yellow_100</item>
+    </style>
+
+    <style name="Theme.Quiz.Sixth" parent="Theme.Quiz">
+        <item name="colorPrimary">#8BC34A</item>
+        <item name="colorPrimaryDark">@color/yellow_100_dark</item>
+        <item name="colorPrimaryVariant">@color/yellow_100_dark</item>
+        <item name="colorSecondary">#B8664A</item>
+        <item name="colorSecondaryVariant">@color/yellow_100</item>
+    </style>
+
+    <style name="Theme.Quiz.Seven" parent="Theme.Quiz">
+        <item name="colorPrimary">#03A9F4</item>
+        <item name="colorPrimaryDark">@color/yellow_100_dark</item>
+        <item name="colorPrimaryVariant">@color/yellow_100_dark</item>
+        <item name="colorSecondary">#1EC4E5</item>
+        <item name="colorSecondaryVariant">@color/yellow_100</item>
+    </style>
+
 </resources>

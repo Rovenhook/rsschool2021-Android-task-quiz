@@ -20,7 +20,8 @@
             android:fitsSystemWindows="true"
             app:navigationContentDescription="Back to the previous question"
             app:navigationIcon="@drawable/ic_baseline_chevron_left_24"
-            app:title="Question 1" />
+            app:title="Question 1"
+            tools:visibility="visible" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -70,11 +71,13 @@
                 android:id="@+id/question"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:text="Question"
                 android:textSize="22sp"
+                android:visibility="visible"
                 app:layout_constraintEnd_toEndOf="@id/margin_end_guideline"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@id/margin_start_guideline"
-                app:layout_constraintTop_toTopOf="@id/margin_top_guideline"
-                tools:text="Est-ce qu'il travaille a Paris?" />
+                app:layout_constraintTop_toTopOf="@id/margin_top_guideline" />
 
             <RadioGroup
                 android:id="@+id/radio_group"
@@ -88,32 +91,38 @@
                     android:id="@+id/option_one"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="Option 1"
+                    android:textSize="20sp"
                     tools:text="Option 1" />
 
                 <RadioButton
                     android:id="@+id/option_two"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:text="Option 2" />
+                    android:text="Option 2"
+                    android:textSize="20sp" />
 
                 <RadioButton
                     android:id="@+id/option_three"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:text="Option 3" />
+                    android:text="Option 3"
+                    android:textSize="20sp" />
 
                 <RadioButton
                     android:id="@+id/option_four"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:checked="true"
-                    tools:text="Option 4" />
+                    android:text="Option 4"
+                    android:textSize="20sp"
+                    tools:checked="true" />
 
                 <RadioButton
                     android:id="@+id/option_five"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:text="Option 5" />
+                    android:text="Option 5"
+                    android:textSize="20sp" />
 
             </RadioGroup>
         </androidx.constraintlayout.widget.ConstraintLayout>
