@@ -5,14 +5,15 @@ import android.os.Bundle
 import android.util.Log
 import com.rsschool.quiz.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity(), QuizFragment.OnQuestionPageChange, ResultFragment.OnRestartPressed {
+class MainActivity : AppCompatActivity(), QuizFragment.OnQuestionPageChange,
+    ResultFragment.OnRestartPressed {
     // this binding variant is from https://developer.android.com/topic/libraries/view-binding
     private lateinit var binding: ActivityMainBinding
 
     //  private val rightAnswers = arrayOf("Canada", "China", "Manilla", "Australia", "Vatican City", "Venezuela" )
 //  private val rightAnswers = arrayOf(-1, 1, 2, 4, 4, 2, 1) // indexes from strings.xml
     private val rightAnswers = arrayOf(-1, 0, 1, 3, 3, 1, 0)
-    private var currentAnswers = IntArray(7){-1}
+    private var currentAnswers = IntArray(7) { -1 }
     private var nextQuestion = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,17 +41,43 @@ class MainActivity : AppCompatActivity(), QuizFragment.OnQuestionPageChange, Res
     }
 
     private fun changePageAndTheme() {
+        var col = R.color.black
         val style = when (nextQuestion) {
-            1 -> R.style.Theme_Quiz_First
-            2 -> R.style.Theme_Quiz_Second
-            3 -> R.style.Theme_Quiz_Third
-            4 -> R.style.Theme_Quiz_Fourth
-            5 -> R.style.Theme_Quiz_Fifth
-            6 -> R.style.Theme_Quiz_Sixth
-            7 -> R.style.Theme_Quiz_Seven
-            else -> R.style.Theme_Quiz_First
+            1 -> {
+                col = R.color.black
+                R.style.Theme_Quiz_First
+            }
+            2 -> {
+                col = R.color.cyan_100_dark
+                R.style.Theme_Quiz_Second
+            }
+            3 -> {
+                col = R.color.deep_orange_100_dark
+                R.style.Theme_Quiz_Third
+            }
+            4 -> {
+                col = R.color.deep_purple_100_dark
+                R.style.Theme_Quiz_Fourth
+            }
+            5 -> {
+                col = R.color.light_green_100_dark
+                R.style.Theme_Quiz_Fifth
+            }
+            6 -> {
+                col = R.color.yellow_100_dark
+                R.style.Theme_Quiz_Sixth
+            }
+            7 -> {
+                col = R.color.black
+                R.style.Theme_Quiz_Seven
+            }
+            else -> {
+                col = R.color.black
+                R.style.Theme_Quiz_First
+            }
         }
         theme.applyStyle(style, true)
+        window.statusBarColor = resources.getColor(col)
         if (nextQuestion == 7) {
             supportFragmentManager.beginTransaction().replace(
                 R.id.fragmentContainerView, ResultFragment
@@ -66,7 +93,7 @@ class MainActivity : AppCompatActivity(), QuizFragment.OnQuestionPageChange, Res
     }
 
     override fun onRestartPressed() {
-        currentAnswers = IntArray(7){-1}
+        currentAnswers = IntArray(7) { -1 }
         nextQuestion = 1
         changePageAndTheme()
     }
@@ -74,7 +101,7 @@ class MainActivity : AppCompatActivity(), QuizFragment.OnQuestionPageChange, Res
     private fun getResult(): String {
         var result = 0
         for (i in 1 until currentAnswers.size) {
-            if(currentAnswers[i] == rightAnswers[i])
+            if (currentAnswers[i] == rightAnswers[i])
                 result++
         }
         return "Your result is: $result out of ${rightAnswers.size - 1}"
